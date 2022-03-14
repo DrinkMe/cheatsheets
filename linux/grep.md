@@ -28,3 +28,7 @@ grep "<a " | awk -F "href=\"" '{print $2}' | cut -d "\"" -f 1 | sort -u
 grep -v -f <file1> <file2>
 ```
 
+### find out all e-mail addresses in a file
+```
+grep -o '[[:alnum:]+\.\_\-]*@[[:alnum:]+\.\_\-]*' <file>
+```
